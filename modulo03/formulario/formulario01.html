@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios ::: FullStack</title>
+</head>
+<body>
+
+    <hr>
+
+    <h1>
+        Módulo de Formularios
+    </h1>
+
+    <hr>
+
+    <form method="get">
+        <label>Nombre: </label>
+        <input maxlength="10" placeholder="Máximo de 10 caracteres" required>
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" placeholder="Introduce tu apellido" >
+
+        <br>
+        <ul>
+            <li>Introduce en la contraseña una letra en Mayúscula</li>
+            <li>También debe tener un número</li>
+            <li>Debe tener como mínimo 8 caracteres</li>
+        </ul>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" minlength="8" placeholder="Mínimo de 8 caracteres">
+
+
+        <br>
+        <br>
+
+        <a href="">Login</a>
+        <a href="">Registro</a>
+
+        <br>
+        <br>
+
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad">
+
+        <br>
+
+        <h4>Sube tu archivo: </h4>
+        <input type="file" name="miarchivo">
+
+        <button>Enviar</button>
+        <input type="button" value="Enviar Datos">
+
+        <input type="reset" value="Borrar Datos">
+    </form>
+
+    <hr>
+    <br>
+    <hr>
+
+    <h1>
+        Otro Formulario
+    </h1>
+
+    <form method="post">
+        <label for="puestos">Puestos de Trabajo: </label>
+
+        <br>
+        <input type="checkbox" name="director" checked> Director </input> <br>
+        <input type="checkbox" name="regente"> Regente </input> <br>
+        <input type="checkbox" name="docente"> Docente </input> <br>
+        <br>
+
+        <label for="sexo">Sexo: </label> <br>
+        <input type="radio" name="hombre" value="Hombre" checked> Hombre </input> <br>
+        <input type="radio" name="mujer" value="Mujer"> Mujer </input> <br>
+
+        <button>Enviar</button>
+        <input type="button" value="Enviar Datos">
+
+    </form>
+
+    <hr>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

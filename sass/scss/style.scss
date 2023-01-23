@@ -1,0 +1,36 @@
+
+
+@import "nav";
+@import "variables";
+@import "anidacion";
+
+body{
+    background: $micolor;
+}
+
+.social{
+    border: 1px solid;
+    background: $modo;
+}
+
+.rednueva{
+    @extend .social;
+    border-top: 2px solid;
+}
+
+@mixin datos($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.caja{
+    @include datos(500px, 350px)
+}
+
+.otracaja{
+    @include datos(800px, 600px)
+}
+
+
+
+

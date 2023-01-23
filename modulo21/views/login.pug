@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .main.container
+        .row 
+            .col-md-6 
+            h1.display-4.m-b-5 #{title}
+
+            div.form-group
+                a.btn.black-black(href="/auth/github") Github
+            div.form-group
+                a.btn.btn-primary(href="/auth/facebook") Facebook
+            div.form-group
+                a.btn.btn-danger(href="/auth/google") Google
+            div.form-group
+                a.btn.btn-info(href="/auth/twitter") Twitter

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "adidas",
+        "precio": 5000,
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "nombre": "topper",
+        "precio": 8000,
+        "stock": 35
+    },
+    {
+        "id": 3,
+        "nombre": "nike",
+        "precio": 15000,
+        "stock": 20
+    }
+]

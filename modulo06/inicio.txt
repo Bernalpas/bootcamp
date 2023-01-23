@@ -1,0 +1,30 @@
+
+Pasos para la creación de una App desde el Back
+
+A. Con NPM
+
+1. npm init
+
+2. npm init -y (crea la configuración de la aplicación / package.json)
+
+3. npm install express 
+
+4. npm i express ... (instalamos dependencias, librerías o paquetes)
+
+5. nodemon index.js (ejecutamos la aplicación)
+
+
+B. Con YARN
+
+1. yarn init
+
+2. yarn init -y (crea la configuración de la aplicación / package.json)
+
+3. yarn add express 
+
+4. yarn add express ... (instalamos dependencias, librerías o paquetes)
+
+5. Agregamos el script para el inicio de la aplicación en package.json
+
+6. yarn run index.js (ejecutamos la aplicación)
+
