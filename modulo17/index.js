@@ -1,7 +1,7 @@
-
-const express = require('express');
 require('dotenv').config();
 require('./database/conexion');
+
+const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const hbs = require('hbs');

@@ -5,6 +5,7 @@ require ('dotenv').config();
 const MONGOLOCAL = process.env.MONGOLOCAL;
 const MONGOATLAS = process.env.MONGOATLAS;
 
+mongoose.set('strictQuery', true);
 
 const conexion = mongoose.connect(MONGOATLAS, {
     useNewUrlParser: true,

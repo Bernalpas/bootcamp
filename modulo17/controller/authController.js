@@ -1,13 +1,13 @@
 const Usuario = require('../models/userModels');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
-const { generarToken } = require('../middelware/generarToken');
-//const jwt = require('jsonwebtoken');
-//const PRIVATE_KEY = 'myprivatekey';
+//const { generarToken } = require('../middelware/generarToken');
+const jwt = require('jsonwebtoken');
+const PRIVATE_KEY = 'myprivatekey';
 
 
 //Función para generar el Token al Usuario
-/* const generarToken = (user) => {
+const generarToken = (user) => {
 
     return new Promise((resolve, reject) => {
         jwt.sign(
@@ -24,7 +24,7 @@ const { generarToken } = require('../middelware/generarToken');
         );
     })
 
-} */
+}
 
 const userCreate = async (req, res) => {
 
@@ -43,7 +43,7 @@ const userCreate = async (req, res) => {
     const { nombre, email, password } = req.body;
     console.log(`1. ${nombre}, ${email}, ${password}`);
 
-    //2. Verificamos si el mail no se repite
+    //2. Verificamos si el email no se repite
     try {
         let usuario = await Usuario.findOne({ email })
         console.log(`2. ${usuario}`); 
@@ -71,7 +71,7 @@ const userCreate = async (req, res) => {
 
     //6. Creamos el Token de acceso al usuario
         const token = await generarToken(usuario);
-        console.log(miToken);
+        console.log(token);
 
 
         //. Respuesta de el POST
@@ -146,7 +146,8 @@ const userLogin = async (req, res) => {
 
         let token = generarToken(usuario);
         res.render('home', {
-            token
+            token,
+            usuario: `${usuario.nombre}`
         })
 
     } catch (error) {
